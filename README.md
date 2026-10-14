@@ -1,25 +1,36 @@
 #  ML & Computer Vision Portfolio
-**Дмитрий Павлуцкий** | Senior ML Engineer / ML Pipeline Architect  
-*Обезличенная демонстрация архитектуры ML-проектов, доведенных до production.*
+**Дмитрий Павлуцкий** | Senior Computer Vision Engineer / ML Pipeline Architect  
+ Санкт-Петербург | phone: +7 (921) 967-76-78 | e-mail: pvlcdm@ya.ru |  Telegram, MAX  
 
 ---
 
-##  Проект 1: Замкнутый цикл разметки и обучения (Smart Labeling Pipeline)
-**Задача:** Ускорить подготовку датасетов для детекции объектов и повысить качество моделей за счет автоматизации.  
-**Результат:** Скорость разметки выросла с 2 000 до 6 100 объектов/день (×2.5). Экономия ~2 FTE.
+##  Кратко о себе
+Инженер Machine Learning с фокусом на Computer Vision и 30-летним опытом управления бизнес-процессами в промышленности. Специализируюсь на построении замкнутых, production-ready ML-циклов: от декомпозиции бизнес-задачи и проектирования архитектуры до внедрения модели и оценки экономического эффекта (ROI). 
 
-### Архитектура системы
-```mermaid
-graph TD
-    A[Raw Video / Images] --> B(Извлечение кадров и предобработка)
-    B --> C{Smart Annotator PyQt6}
-    C -->|Auto-labeling| D[YOLO Ensemble + WBF]
-    C -->|Refinement| E[SAM2 BBox Fitting]
-    D --> F[(SQLite Metadata & Labels)]
-    E --> F
-    F --> G[Training Pipeline CLI/GUI]
-    G -->|Multi-model: YOLO26s/m| H[TensorBoard & Metrics]
-    H --> I[Plotly/HTML Analytics Report]
-    I -->|Feedback Loop| C
-    style C fill:#f9f,stroke:#333,stroke-width:2px
-    style G fill:#bbf,stroke:#333,stroke-width:2px
+##  Ключевые метрики в цифрах
+- **×2.5** рост скорости разметки данных (с 2 000 до 6 100 объектов/день)
+- **~2 FTE** сэкономленных человеко-часов за счет автоматизации
+- **mAP50 = 0.80**, Precision = 0.91 на промышленных датасетах
+- **320 000+** размеченных изображений в единой управляемой базе
+
+##  Оглавление проектов
+Ниже представлены обезличенные архитектурные описания реализованных систем. Исходный код предоставляется по запросу под NDA.
+
+1. [ Проект 1: Замкнутый цикл Smart Labeling и Training Pipeline](projects/01-smart-labeling-pipeline/README.md)  
+   *Автоматизация разметки, ансамблевый инференс, SQLite-хранилище, аналитика.*
+2. [ Проект 2: Интеллектуальная обработка документов (OCR + VLM)](projects/02-ocr-vlm-arbitration/README.md)  
+   *Конвейер PDF → Excel с семантическим арбитражом спорных участков через локальные LLM.*
+3. [ Проект 3: Видеоаналитика и трекинг объектов](projects/03-video-tracking/README.md)  
+   *Детекция и прогнозирование траекторий перемещающихся объектов в реальном времени.*
+
+##  Признание и квалификация
+-  **Патент:** Свидетельство о регистрации программы для ЭВМ № 2026685247 (Роспатент, 20.08.2026). [Подробнее](PATENT.md)
+-  **Образование:** ТГУ («Аналитик данных», 2022), ЛИНЦ («Менеджмент», 2006), ЛИИЖТ (Инженер, 1991).
+
+##  Сводный технологический стек
+- **ML/DL:** PyTorch, Ultralytics (YOLOv8/v11, SAM2), Transformers (Qwen2.5-VL), OpenCV, WBF
+- **Data & BI:** Pandas, SQLite, Streamlit, Plotly, TensorBoard
+- **Инфраструктура:** Python, C++, Git, Linux, PyQt6, YAML, JSON/CSV/XML
+
+---
+> 
