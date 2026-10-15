@@ -1,7 +1,7 @@
 # ML & Computer Vision Portfolio
 
 **Дмитрий Павлуцкий** | Senior Computer Vision Engineer / ML Pipeline Architect
-Санкт-Петербург | +7 (921) 967-76-78 | pvlcdm@ya.ru | Telegram: https://t.me/DMTRPVLC
+Санкт-Петербург | +7 (921) 967-76-78 | dmtrpvlc@gmail.com | Telegram: https://t.me/DMTRPVLC
 
 ---
 
